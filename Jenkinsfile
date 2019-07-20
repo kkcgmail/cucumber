@@ -1,6 +1,11 @@
 pipeline{
 
     agent any
+    
+    tools {
+        maven "maven_3.5.3"
+        ant "ant_1.10.3"
+    }
 
     stages {
 
@@ -8,10 +13,10 @@ pipeline{
 
             steps {
 
-                withMaven(maven: 'maven_3_5_0') {
+               
                     sh 'mvn clean install'
 
-                }
+               
 
             }
         }
@@ -19,10 +24,10 @@ pipeline{
 
             steps {
 
-                withMaven(maven: 'maven_3_5_0') {
+               
                     sh 'mvn test'
 
-                }
+              
 
             }
         }
