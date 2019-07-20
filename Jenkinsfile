@@ -2,10 +2,7 @@ pipeline{
 
     agent any
     
-    tools {
-        maven "maven_3.5.3"
-        ant "ant_1.10.3"
-    }
+   
 
     stages {
 
