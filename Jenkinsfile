@@ -1,6 +1,9 @@
 pipeline{
 
-    agent any
+    // only run on master for now
+	agent {
+		label 'master'
+	}
     
    
 
